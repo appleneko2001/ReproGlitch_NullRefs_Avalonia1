@@ -1,0 +1,28 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="ReproduceGlitch_NullRef_Avalonia.MainWindow"
+        Title="ReproduceGlitch_NullRef_Avalonia"
+        
+		SystemDecorations="None"
+        SizeToContent="WidthAndHeight">
+	<Window.Styles>
+		<Style Selector="Window[SystemDecorations=None]">
+		  <Setter Property="TransparencyLevelHint" Value="Transparent"/> 
+		</Style> 
+	</Window.Styles>
+    <Border CornerRadius="8"
+			Background="Gray"
+			BorderThickness="2"
+			BorderBrush="Black"
+			Margin="32">
+        <StackPanel Margin="8,16">
+            <TextBlock Foreground="White" Text="Welcome to Avalonia!"/>
+			<Button Click="ShowWindowButton_OnClick" Content="Show window"/>
+            <Button Click="ShowDialogButton_OnClick" Content="Show dialog"/>
+            <Button Click="Button_OnClick" Content="Close"/>
+        </StackPanel>
+    </Border>
+</Window>
